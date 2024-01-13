@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ShareList from "../components/share/ShareList";
 
-const DUMMY_DATA = [
+/*const DUMMY_DATA = [
     { 
         id: 's1',
         title: 'My Summer Vacation at Santorini',
@@ -23,16 +23,49 @@ const DUMMY_DATA = [
         name: 'Christiano Pinto',
         description: 'An island in the Aegean Sea, Santorini is known for its pristine whitewashed houses spread across jagged cliffs, astonishing blue waters, dramatic views, fabulous sunsets, the ancient settlement of Thira and an active volcano.'
     }
-]
+]*/
 
-function Home()
-{
-    return(
-        <section>
-            <h1>All Thoughts</h1>
-            <ShareList shares={DUMMY_DATA} />
-        </section>
+function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedShares, setLoadedShares] = useState([]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("https://reflect-f0a06-default-rtdb.firebaseio.com/shares.json")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const shares = [];
+
+        for(const key in data)
+        {
+            const share = {
+                id: key,
+                ...data[key]
+            };
+            shares.push(share);
+        }
+
+        setIsLoading(false);
+        setLoadedShares(shares);
+      });
+  }, []);
+
+  if (isLoading) {
+    return (
+      <section>
+        <p>Loading...</p>
+      </section>
     );
+  }
+
+  return (
+    <section>
+      <h1>All Thoughts</h1>
+      <ShareList shares={loadedShares} />
+    </section>
+  );
 }
 
 export default Home;

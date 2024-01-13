@@ -16,7 +16,7 @@ function ShareItem(props) {
           <p>{props.description}</p>
         </div>
         <div className={classes.actions}>
-          <button>Show More</button>
+          <button>Add to Favorites</button>
         </div>
       </Card>
     </li>

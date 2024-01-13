@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import Card from '../ui/Card';
 import classes from './NewShareForm.module.css';
 
-function NewShareForm() {
+function NewShareForm(props) {
     const titleInputRef = useRef();
     const imageInputRef = useRef();
     const nameInputRef = useRef();
@@ -23,7 +23,8 @@ function NewShareForm() {
             image: enteredImage,
             name: enteredName,
             description: enteredDescription
-        }
+        };
+        props.onAddShare(shareData);
 
     }
 

@@ -3,10 +3,13 @@ import NewShareForm from "../components/share/NewShareForm";
 
 function NewShare()
 {
+    function addShareHandler(shareData)
+    {}
+
     return(
         <section>
             <h1>Share your new Experience</h1>
-            <NewShareForm />
+            <NewShareForm onAddShare={addShareHandler} />
         </section>
     );
 }

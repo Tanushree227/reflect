@@ -1,0 +1,47 @@
+.form-container
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+.register-form
+{
+  padding: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+.actions {
+    margin-top: 1rem;
+    text-align: center;
+    padding: 10px;
+  }
+
+.actions button{
+    font: inherit;
+    cursor: pointer;
+    background-color: #1b263b;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: 1px solid #1b263b;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.actions button:hover,
+  .actions button:active {
+    background-color: #eb5e28;
+    border-color: #eb5e28;
+  }
+  p
+  {
+    text-align: center;
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: justify;
+  }

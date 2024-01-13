@@ -1,9 +1,10 @@
 import React from "react";
+import LoginForm from "../components/share/LoginForm";
 
 function Login()
 {
     return(
-        <h1>Login Page</h1>
+        <LoginForm />
     );
 }
 

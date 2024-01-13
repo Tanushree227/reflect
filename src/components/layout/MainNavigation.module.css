@@ -45,3 +45,9 @@
     padding: 0 1rem;
     margin-left: 0.5rem;
   }
+  .login
+  {
+    background-color: #a7c957;
+    padding: 0 1rem;
+    border-radius: 12px;
+  }

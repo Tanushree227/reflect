@@ -28,7 +28,7 @@ function LoginForm() {
           <Input type="password" placeholder="Enter your Password" required />
         </Form.Item>
         <div className="actions">
-          <button type="submit">Sign-Up</button>
+          <button type="submit">Log In</button>
         </div>
       </Form>
     </div>

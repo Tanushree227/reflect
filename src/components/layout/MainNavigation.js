@@ -12,7 +12,7 @@ function MainNavigation()
                     <li><Link to="/" exact>Home</Link></li>
                     <li><Link to="/newshare">Share Experience</Link></li>
                     <li><Link to="/favorites">Favorites</Link></li>
-                    <li><Link to="/login">Log In</Link></li>
+                    <li className={classes.login}><Link to="/login">Log In</Link></li>
                 </ul>
             </nav>
         </header>

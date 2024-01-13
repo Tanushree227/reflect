@@ -4,12 +4,11 @@ import NewShare from "./pages/NewShare";
 import Favorites from "./pages/Favorites";
 import Signup from "./pages/Signup";
 import Login from "./pages/Login";
-import MainNavigation from "./components/layout/MainNavigation";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
-    <div>
-      <MainNavigation />
+    <Layout>
       <Routes>
         <Route path="/" exact element={<Home />} />
         <Route path="/newshare" element={<NewShare />} />
@@ -17,7 +16,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
       </Routes>
-    </div>
+      </Layout>
   );
 }
 

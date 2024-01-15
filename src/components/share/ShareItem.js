@@ -1,7 +1,30 @@
 import classes from "./ShareItem.module.css";
 import Card from "../ui/Card";
+import { useContext } from "react";
+import FavoritesContext from "../../store/favorites-context";
 
 function ShareItem(props) {
+  const favoritesCtx = useContext(FavoritesContext);
+
+  const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);
+
+  function toggleFavoriteHandler() {
+    if(itemIsFavorite) 
+    {
+      favoritesCtx.removeFavorite(props.id);
+    }
+    else
+    {
+      favoritesCtx.addFavorite({
+        id: props.id,
+        title: props.title,
+        description: props.description,
+        image: props.image,
+        name: props.name
+      });
+    }
+  }
+
   return (
     <li className={classes.item}>
       <Card>
@@ -16,7 +39,7 @@ function ShareItem(props) {
           <p>{props.description}</p>
         </div>
         <div className={classes.actions}>
-          <button>Add to Favorites</button>
+          <button onClick={toggleFavoriteHandler}>{itemIsFavorite ? 'Remove from Favorites' : 'Add to Favorites'}</button>
         </div>
       </Card>
     </li>

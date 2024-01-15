@@ -48,7 +48,7 @@ function NewShareForm(props) {
                     <textarea id='description' placeholder='Tell us in detail about your Experience' ref={descriptionInputRef} required rows='5' ></textarea>
                 </div>
                 <div className={classes.actions}>
-                    <button>Add your Experience</button>
+                    <button>Share</button>
                 </div>
             </form>
         </Card>

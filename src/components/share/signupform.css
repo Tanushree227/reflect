@@ -21,10 +21,10 @@
 .actions button{
     font: inherit;
     cursor: pointer;
-    background-color: #1b263b;
+    background-color: #386641;
     color: white;
     padding: 0.5rem 1.5rem;
-    border: 1px solid #1b263b;
+    border: 1px solid #386641;
     border-radius: 4px;
     font-weight: bold;
 }
@@ -42,6 +42,6 @@
   .card {
     background-color: white;
     border-radius: 6px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     text-align: justify;
   }

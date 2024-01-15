@@ -74,7 +74,7 @@ function SignupForm(props) {
           <Input
             type="password"
             placeholder="Re-Type your Password"
-            ref={c_passwordInputRef}
+            ref={c_passwordInputRef}  
             required
           />
         </Form.Item>
@@ -85,7 +85,7 @@ function SignupForm(props) {
           </Link>
         </p>
         <div className="actions">
-          <button type="submit">Sign-Up</button>
+          <button type="submit">Sign-Up</button>  
         </div>
       </Form>
     </div>

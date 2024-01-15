@@ -8,7 +8,6 @@ function NewShareForm(props) {
     const nameInputRef = useRef();
     const descriptionInputRef = useRef();
 
-
     function submitHandler(event) 
     {
         event.preventDefault();
@@ -26,7 +25,7 @@ function NewShareForm(props) {
         };
         props.onAddShare(shareData);
 
-    }
+    };
 
     return(
         <Card>

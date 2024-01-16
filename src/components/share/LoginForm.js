@@ -10,7 +10,7 @@ function LoginForm() {
     <div className="form-container">
       <form
         layout="vertical"
-        onFinish={onFinishHandler}
+        onSubmit={onFinishHandler}
         className="register-form card p-5"
       >
         <h1 className="text-center">Log in to your account</h1>

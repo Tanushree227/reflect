@@ -34,7 +34,7 @@ function SignupForm(props) {
     <div className="form-container">
       <Form
         layout="vertical"
-        onSubmit={submitHandler}
+        onSubmit= {submitHandler}
         className="register-form card p-4"
       >
         <h1 className="text-center">Create your Account</h1>

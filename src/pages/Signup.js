@@ -8,7 +8,7 @@ function Signup()
 
     function addUserHandler(userData)
     {
-        fetch('https://reflect-f0a06-default-rtdb.firebaseio.com/user.json',
+        fetch('https://reflect-f0a06-default-rtdb.firebaseio.com/users.json',
         {
             method: 'POST',
             body: JSON.stringify(userData),

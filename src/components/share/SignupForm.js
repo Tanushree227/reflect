@@ -1,5 +1,4 @@
 import React from "react";
-import { Form, Input } from "antd";
 import { Link } from "react-router-dom";
 import "./signupform.css";
 import { useRef } from "react";
@@ -27,57 +26,67 @@ function SignupForm(props) {
       password: enteredPassword,
       c_password: enteredCPassword,
     };
-    props.onSignup(userData);
+        props.onSignup(userData);
   }
 
   return (
     <div className="form-container">
-      <Form
+      <form
         layout="vertical"
         onSubmit= {submitHandler}
         className="register-form card p-4"
       >
         <h1 className="text-center">Create your Account</h1>
-        <Form.Item label="Name" name="fullname">
-          <Input
+        <div className="control">
+        <label name="fullname">Name
+          <input
             type="text"
             placeholder="Enter your Full Name"
             ref={fullnameInputRef}
             required
           />
-        </Form.Item>
-        <Form.Item label="Email" name="email">
-          <Input
+        </label>
+        </div>
+        <div className="control">
+        <label name="email">Email
+          <input
             type="email"
             placeholder="Enter your Email Id"
             ref={emailInputRef}
             required
           />
-        </Form.Item>
-        <Form.Item label="Phone" name="phone">
-          <Input
+        </label>
+        </div>
+        <div className="control">
+        <label name="phone">Phone
+          <input
             type="phone"
             placeholder="Enter your Phone Number"
             ref={phoneInputRef}
             required
           />
-        </Form.Item>
-        <Form.Item label="Password" name="password">
-          <Input
+        </label>
+        </div>
+        <div className="control">
+        <label label="Password" name="password">Password
+          <input
             type="password"
             placeholder="Enter your Password"
             ref={passwordInputRef}
             required
           />
-        </Form.Item>
-        <Form.Item label="Confirm Password" name="c_password">
-          <Input
+        </label>
+        </div>
+        <div className="control">
+        <label name="c_password">Confirm Password
+          <input
             type="password"
             placeholder="Re-Type your Password"
             ref={c_passwordInputRef}  
             required
           />
-        </Form.Item>
+        </label>
+        </div>
         <p>
           Already have an Account?
           <Link to="/login" className="ms-2">
@@ -87,7 +96,7 @@ function SignupForm(props) {
         <div className="actions">
           <button type="submit">Sign-Up</button>  
         </div>
-      </Form>
+      </form>
     </div>
   );
 }

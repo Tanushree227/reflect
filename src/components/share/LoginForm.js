@@ -1,5 +1,4 @@
 import React from "react";
-import { Form, Input } from "antd";
 import "./signupform.css";
 import { Link } from "react-router-dom";
 
@@ -9,7 +8,7 @@ function LoginForm() {
   };
   return (
     <div className="form-container">
-      <Form
+      <form
         layout="vertical"
         onFinish={onFinishHandler}
         className="register-form card p-5"
@@ -21,16 +20,20 @@ function LoginForm() {
             Sign - Up
           </Link>
         </p>
-        <Form.Item label="Email" name="email">
-          <Input type="email" placeholder="Enter your Email Id" required />
-        </Form.Item>
-        <Form.Item label="Password" name="password">
-          <Input type="password" placeholder="Enter your Password" required />
-        </Form.Item>
+        <div className="control">
+        <label name="email">Email
+          <input type="email" placeholder="Enter your Email Id" required />
+        </label>
+        </div>
+        <div className="control">
+        <label  name="password">Password
+          <input type="password" placeholder="Enter your Password" required />
+        </label>
+        </div>
         <div className="actions">
           <button type="submit">Log In</button>
         </div>
-      </Form>
+      </form>
     </div>
   );
 }

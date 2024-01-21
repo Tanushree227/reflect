@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import "./signupform.css";
 import { useRef } from "react";
 
+//const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
+
 function SignupForm(props) {
   const fullnameInputRef = useRef();
   const emailInputRef = useRef();
@@ -38,9 +41,11 @@ function SignupForm(props) {
       >
         <h1 className="text-center">Create your Account</h1>
         <div className="control">
-        <label name="fullname">Name
+        <label htmlFor="fullname" name="fullname">Name
           <input
             type="text"
+            id="fullname"
+            autoComplete="off"
             placeholder="Enter your Full Name"
             ref={fullnameInputRef}
             required
@@ -48,11 +53,13 @@ function SignupForm(props) {
         </label>
         </div>
         <div className="control">
-        <label name="email">Email
+        <label htmlFor="email" name="email">Email
           <input
             type="email"
+            id="email"
             placeholder="Enter your Email Id"
             ref={emailInputRef}
+            autoComplete="off"
             required
           />
         </label>
@@ -68,9 +75,10 @@ function SignupForm(props) {
         </label>
         </div>
         <div className="control">
-        <label label="Password" name="password">Password
+        <label htmlFor="password" name="password">Password
           <input
             type="password"
+            id="password"
             placeholder="Enter your Password"
             ref={passwordInputRef}
             required
@@ -78,9 +86,10 @@ function SignupForm(props) {
         </label>
         </div>
         <div className="control">
-        <label name="c_password">Confirm Password
+        <label htmlFor="c_password" name="c_password">Confirm Password
           <input
             type="password"
+            id="c_password"
             placeholder="Re-Type your Password"
             ref={c_passwordInputRef}  
             required

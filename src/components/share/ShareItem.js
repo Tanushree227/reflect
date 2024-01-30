@@ -39,7 +39,7 @@ function ShareItem(props) {
           <p>{props.description}</p>
         </div>
         <div className={classes.actions}>
-          <button onClick={toggleFavoriteHandler}>{itemIsFavorite ? 'Remove from Favorites' : 'Add to Favorites'}</button>
+          <button onClick={toggleFavoriteHandler}>{itemIsFavorite ? 'Remove from Wishlist' : 'Add to Wishlist'}</button>
         </div>
       </Card>
     </li>

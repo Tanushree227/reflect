@@ -62,7 +62,7 @@ function Home() {
 
   return (
     <section>
-      <h1>All Thoughts</h1>
+      <h1>All Posts</h1>
       <ShareList shares={loadedShares} />
     </section>
   );

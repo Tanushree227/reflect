@@ -13,9 +13,8 @@ function MainNavigation()
             <nav>
                 <ul>
                     <li><Link to="/" exact>Home</Link></li>
-                    <li><Link to="/newshare">Share Experience</Link></li>
-                    <li><Link to="/favorites">Favorites<span className={classes.badge}>{favoritesCtx.totalFavorites}</span></Link></li>
-                    <li className={classes.login}><Link to="/login">Log In</Link></li>
+                    <li><Link to="/newshare">New Post</Link></li>
+                    <li><Link to="/favorites">Wishlists<span className={classes.badge}>{favoritesCtx.totalFavorites}</span></Link></li>
                 </ul>
             </nav>
         </header>
@@ -23,3 +22,5 @@ function MainNavigation()
 }
 
 export default MainNavigation;
+
+//<li className={classes.login}><Link to="/login">Log In</Link></li>

@@ -9,7 +9,7 @@ function MainNavigation()
 
     return(
         <header className={classes.header}>
-            <div className={classes.logo}>Reflect</div>
+            <div className={classes.logo}>EchoHub</div>
             <nav>
                 <ul>
                     <li><Link to="/" exact>Home</Link></li>
